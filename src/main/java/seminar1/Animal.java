@@ -11,19 +11,17 @@ public class Animal {
     private double age;
     private double weight;
     private int height;
-
     private String food;
 
-
-    protected Animal() {
+    public Animal() {
         this("", 0, 0, 0, "");
     }
 
-    protected Animal(String name) {
+    public Animal(String name) {
         this(name, 0, 0, 0, "");
     }
 
-    protected Animal(String name, double age, double weight, int height, String food) {
+    public Animal(String name, double age, double weight, int height, String food) {
         if (name.isEmpty() || name.isBlank() || Character.isDigit(name.charAt(0)) || Animal.names.contains(name)) {
             this.name = String.format("AnimalName_%d", index);
         } else {
@@ -76,8 +74,16 @@ public class Animal {
         this.food = food;
     }
 
-    protected String voice() {
-        return "Animal voice";
+    public void voice() {
+        System.out.println("Animal voice");
+    }
+
+    public void eat() {
+        System.out.println("Animal is eating");
+    }
+
+    public void sleep() {
+        System.out.println("Animal is sleeping");
     }
 
     @Override

@@ -10,7 +10,7 @@ public class Dog extends Animal {
     }
 
     public Dog(String name, double age, double weight, int height, String food, String breed) {
-        super(name, age, weight, height, "omnivore");
+        super(name, age, weight, height, food);
         this.breed = breed;
     }
 
