@@ -38,10 +38,6 @@ public class Animal {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public double getAge() {
         return age;
     }

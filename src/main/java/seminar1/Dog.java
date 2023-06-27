@@ -18,6 +18,15 @@ public class Dog extends Animal {
         return (int) (16 * Math.log(this.getAge()) + 31);
     }
 
+    public String getBreed() {
+        return breed;
+    }
+
+    @Override
+    public void voice() {
+        System.out.println("Bark! Bark!");
+    }
+
     @Override
     public String toString() {
         return "Dog{" +
