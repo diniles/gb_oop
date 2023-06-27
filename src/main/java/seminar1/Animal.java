@@ -65,6 +65,10 @@ public class Animal {
         this.height = height;
     }
 
+    protected String voice() {
+        return "Animal voice";
+    }
+
     @Override
     public String toString() {
         return "Animal{" +
@@ -80,7 +84,8 @@ public class Animal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Animal animal = (Animal) o;
-        return Double.compare(getAge(), animal.getAge()) == 0 && Double.compare(getWeight(), animal.getWeight()) == 0 && getHeight() == animal.getHeight() && Objects.equals(getName(), animal.getName());
+        return Double.compare(getAge(), animal.getAge()) == 0 && Double.compare(getWeight(), animal.getWeight()) == 0
+                && getHeight() == animal.getHeight() && Objects.equals(getName(), animal.getName());
     }
 
     @Override
