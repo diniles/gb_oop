@@ -1,6 +1,7 @@
 package seminar1;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Animal {
     private static int index = 1;
@@ -58,5 +59,28 @@ public class Animal {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                ", height=" + height +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return Double.compare(getAge(), animal.getAge()) == 0 && Double.compare(getWeight(), animal.getWeight()) == 0 && getHeight() == animal.getHeight() && Objects.equals(getName(), animal.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getAge(), getWeight(), getHeight());
     }
 }
