@@ -14,8 +14,8 @@ public class Dog extends Animal {
         this.breed = breed;
     }
 
-    public double ageInHumanYears(double age) {
-        return 16 * Math.log(this.getAge() + 31);
+    public int getAgeInHumanYears() {
+        return (int) (16 * Math.log(this.getAge()) + 31);
     }
 
     @Override
