@@ -11,6 +11,7 @@ class AnimalTest {
         Animal first = new Animal("first");
         Animal second = new Animal("second", 1, 3, 22);
         Animal third = new Animal("first");
+        Animal fourth = new Animal();
 
         Assertions.assertEquals("first", first.getName());
 
@@ -20,5 +21,6 @@ class AnimalTest {
         Assertions.assertEquals(22, second.getHeight());
 
         Assertions.assertNotEquals("first", third.getName());
+        Assertions.assertNotEquals("first", fourth.getName());
     }
 }
