@@ -3,8 +3,6 @@ package seminar1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class AnimalTest {
 
 
@@ -20,16 +18,7 @@ class AnimalTest {
         Assertions.assertEquals(1, second.getAge());
         Assertions.assertEquals(3, second.getWeight());
         Assertions.assertEquals(22, second.getHeight());
-        
-        Assertions.assertNotEquals("first", first.getName());
 
-    }
-
-    @Test
-    void testToString() {
-    }
-
-    @Test
-    void testEquals() {
+        Assertions.assertNotEquals("first", third.getName());
     }
 }

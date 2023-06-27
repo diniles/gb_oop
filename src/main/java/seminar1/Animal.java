@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Animal {
     private static int index = 1;
-    private static ArrayList<String> names;
+    private static ArrayList<String> names = new ArrayList<>();
 
     private String name;
     private double age;
@@ -22,7 +22,7 @@ public class Animal {
     }
 
     protected Animal(String name, double age, double weight, int height) {
-        if (name.isEmpty() || Character.isDigit(name.charAt(0)) || Animal.names.contains(name)) {
+        if (name.isEmpty() || name.isBlank() || Character.isDigit(name.charAt(0)) || Animal.names.contains(name)) {
             this.name = String.format("AnimalName_%d", index);
         } else {
             this.name = name;
