@@ -13,6 +13,10 @@ public class Animal {
     private int height;
 
 
+    protected Animal() {
+        this("", 0, 0, 0);
+    }
+
     protected Animal(String name) {
         this(name, 0, 0, 0);
     }
