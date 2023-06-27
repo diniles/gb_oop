@@ -9,7 +9,7 @@ class AnimalTest {
     @Test
     void testOfCreation() {
         Animal first = new Animal("first");
-        Animal second = new Animal("second", 1, 3, 22);
+        Animal second = new Animal("second", 1, 3, 22, "grass");
         Animal third = new Animal("first");
         Animal fourth = new Animal();
 

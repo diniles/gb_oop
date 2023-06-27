@@ -12,16 +12,18 @@ public class Animal {
     private double weight;
     private int height;
 
+    private String food;
+
 
     protected Animal() {
-        this("", 0, 0, 0);
+        this("", 0, 0, 0, "");
     }
 
     protected Animal(String name) {
-        this(name, 0, 0, 0);
+        this(name, 0, 0, 0, "");
     }
 
-    protected Animal(String name, double age, double weight, int height) {
+    protected Animal(String name, double age, double weight, int height, String food) {
         if (name.isEmpty() || name.isBlank() || Character.isDigit(name.charAt(0)) || Animal.names.contains(name)) {
             this.name = String.format("AnimalName_%d", index);
         } else {
@@ -31,6 +33,7 @@ public class Animal {
         this.age = age;
         this.weight = weight;
         this.height = height;
+        this.food = food;
     }
 
     public String getName() {
@@ -65,6 +68,14 @@ public class Animal {
         this.height = height;
     }
 
+    public String getFood() {
+        return food;
+    }
+
+    public void setFood(String food) {
+        this.food = food;
+    }
+
     protected String voice() {
         return "Animal voice";
     }
@@ -76,6 +87,7 @@ public class Animal {
                 ", age=" + age +
                 ", weight=" + weight +
                 ", height=" + height +
+                ", food='" + food + '\'' +
                 '}';
     }
 
@@ -84,12 +96,14 @@ public class Animal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Animal animal = (Animal) o;
-        return Double.compare(getAge(), animal.getAge()) == 0 && Double.compare(getWeight(), animal.getWeight()) == 0
-                && getHeight() == animal.getHeight() && Objects.equals(getName(), animal.getName());
+        return Double.compare(animal.getAge(), getAge()) == 0 &&
+                Double.compare(animal.getWeight(), getWeight()) == 0 &&
+                getHeight() == animal.getHeight() && Objects.equals(getName(), animal.getName()) &&
+                Objects.equals(getFood(), animal.getFood());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(), getAge(), getWeight(), getHeight());
+        return Objects.hash(getName(), getAge(), getWeight(), getHeight(), getFood());
     }
 }
