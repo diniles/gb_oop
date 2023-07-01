@@ -26,17 +26,17 @@ public class Dog extends Animal {
 
     @Override
     public void voice() {
-        System.out.printf("Dog %s breed is Barking! Bark! Bark!. \n", breed);
+        System.out.printf("Dog %s breed %s is Barking! Bark! Bark!. \n", getName(), breed);
     }
 
     @Override
     public void eat() {
-        System.out.printf("Dog %s breed is eating %s. \n", breed, getFood());
+        System.out.printf("Dog %s breed %s is eating %s. \n", getName(), breed, getFood());
     }
 
     @Override
     public void sleep() {
-        System.out.printf("Dog %s breed is sleeping. Hrrrr.... Hr....\n", breed, getFood());
+        System.out.printf("Dog %s breed %s is sleeping. Hrrrr.... Hr....\n", getName(), breed, getFood());
     }
 
     @Override

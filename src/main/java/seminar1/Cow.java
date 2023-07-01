@@ -26,17 +26,17 @@ public class Cow extends Animal {
 
     @Override
     public void voice() {
-        System.out.println("Cow says Moooo! Moooo!.");
+        System.out.printf("Cow %s says Moooo! Moooo!\n", getName());
     }
 
     @Override
     public void eat() {
-        System.out.printf("Cow is eating %s. \n", getFood());
+        System.out.printf("Cow %s is eating %s. \n", getName(), getFood());
     }
 
     @Override
     public void sleep() {
-        System.out.println("Cow is sleeping. No sounds");
+        System.out.printf("Cow %s is sleeping. No sounds.\n", getName());
     }
 
     @Override

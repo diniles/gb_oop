@@ -20,17 +20,17 @@ public class Cat extends Animal {
 
     @Override
     public void voice() {
-        System.out.printf("Cat %s breed is Meows! Meow! Meow!. \n", breed);
+        System.out.printf("Cat %s breed %s is Meows! Meow! Meow!. \n", getName(), breed);
     }
 
     @Override
     public void eat() {
-        System.out.printf("Cat %s breed is eating %s. \n", breed, getFood());
+        System.out.printf("Cat %s breed %s is eating %s. \n", getName(), breed, getFood());
     }
 
     @Override
     public void sleep() {
-        System.out.printf("Cat %s breed is sleeping. Hums.... Hum....\n", breed, getFood());
+        System.out.printf("Cat %s breed %s is sleeping. Hums.... Hum....\n", getName(), breed, getFood());
     }
 
     @Override
