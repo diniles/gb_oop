@@ -13,14 +13,24 @@ public class Cat extends Animal {
         super(name, age, weight, height, food);
         this.breed = breed;
     }
-    
+
     public String getBreed() {
         return breed;
     }
 
     @Override
     public void voice() {
-        System.out.println("Meow! Meow!");
+        System.out.printf("Cat %s breed is Meows! Meow! Meow!. \n", breed);
+    }
+
+    @Override
+    public void eat() {
+        System.out.printf("Cat %s breed is eating %s. \n", breed, getFood());
+    }
+
+    @Override
+    public void sleep() {
+        System.out.printf("Cat %s breed is sleeping. Hums.... Hum....\n", breed, getFood());
     }
 
     @Override
