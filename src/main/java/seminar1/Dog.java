@@ -1,5 +1,7 @@
 package seminar1;
 
+import javax.sound.midi.Soundbank;
+
 public class Dog extends Animal {
 
     private String breed;
@@ -24,7 +26,17 @@ public class Dog extends Animal {
 
     @Override
     public void voice() {
-        System.out.println("Bark! Bark!");
+        System.out.printf("Dog %s breed is Barking! Bark! Bark!. \n", breed);
+    }
+
+    @Override
+    public void eat() {
+        System.out.printf("Dog %s breed is eating %s. \n", breed, getFood());
+    }
+
+    @Override
+    public void sleep() {
+        System.out.printf("Dog %s breed is sleeping. Hrrrr.... Hr....\n", breed, getFood());
     }
 
     @Override

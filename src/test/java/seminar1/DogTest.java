@@ -11,4 +11,5 @@ class DogTest {
     void ageInHumanYears() {
         Assertions.assertEquals(48, firstDog.getAgeInHumanYears());
     }
+
 }
