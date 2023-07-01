@@ -1,17 +1,25 @@
 package seminar1;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Dog firstDog = new Dog("firstDog", 5, 15, 35, "meat", "cocker");
-        Cat firstCat = new Cat("firstCat", 2, 6, 22, "meat", "sphinx");
-        firstDog.eat();
-        firstDog.voice();
-        firstDog.sleep();
-        firstCat.eat();
-        firstCat.voice();
-        firstCat.sleep();
+        ArrayList<Animal> animals = new ArrayList<>();
+//        Dog oscar=new Dog("Oscar", 12, 15,25,"meat", "cocker");
+        animals.add(new Dog("Oscar", 12, 15, 25, "meat", "cocker"));
+        animals.add(new Cat("Murka", 3, 5, 20, "milk", "sphinx"));
+        animals.add(new Cow("Zorka", 5, 120, 120, "grass", 12));
+
+        for (Animal animal : animals) {
+            System.out.println(animal);
+            animal.voice();
+            animal.eat();
+            animal.sleep();
+            System.out.println("--------------------");
+        }
+
     }
 
 
