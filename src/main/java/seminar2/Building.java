@@ -1,6 +1,6 @@
 package seminar2;
 
-public class Building {
+public class Building implements Health {
 
     private int maxHealthPoint; // максимально количество здоровья
     private int currentHealthPoint; // текущее количество здоровья
@@ -15,4 +15,14 @@ public class Building {
     }
 
     // FIXME: 29.06.2023 Дописать нужное
+
+    @Override
+    public int getHealth() {
+        return this.currentHealthPoint;
+    }
+
+    @Override
+    public int getHealthMax() {
+        return this.maxHealthPoint;
+    }
 }
