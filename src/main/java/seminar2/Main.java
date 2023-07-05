@@ -35,11 +35,7 @@ public class Main {
         Building building = new Building(100);
         building.setCurrentHealthPoint(50);
 
-        render.showIndicator(building); // В консоли должно быть примерно так: Текущий уровень здоровья: 50, максимальный уровень здоровья: 100
-
-        System.out.println(ANSI_RED + "This text has a red background but default text!" + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "This text has a green background but default text!" + ANSI_RESET);
-
+        render.showIndicator(building);
 
     }
 }
