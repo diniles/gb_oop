@@ -36,15 +36,20 @@ public class Main {
         building.setCurrentHealthPoint(50);
         Hero hero = new Hero(80, 80);
         hero.setCurrentHealthPoint(50);
+        Neutral neutral = new Neutral(20);
+        hero.setCurrentHealthPoint(10);
 
 
         System.out.println(building.getClass().getSimpleName());
         render.showIndicator(building);
         System.out.println();
-        
+
         System.out.println(hero.getClass().getSimpleName());
         render.showIndicator(hero);
         System.out.println();
+
+        System.out.println(neutral.getClass().getSimpleName());
+        render.showIndicator(neutral);
 
     }
 }
