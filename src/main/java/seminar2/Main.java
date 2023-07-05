@@ -24,7 +24,8 @@
  * * Необязательные задания, которые не относятся к теме, но при сильном желании можно реализовать.
  * * Со звездочкой: реализовать в консоли отображение индикатора.
  * Например, при максимальном уровне здоровья 100 и текущем 40 можно отобразить вот такую ленточку: [xxxx      ]
- * ** С двумя звездочками: раскрасить вывод. Чем меньше здоровья, тем "краснее" цвет индикатора. Для полного здоровья - цвет зеленый.
+ * ** С двумя звездочками: раскрасить вывод. Чем меньше здоровья, тем "краснее" цвет индикатора.
+ * Для полного здоровья - цвет зеленый.
  */
 package seminar2;
 
@@ -34,7 +35,7 @@ public class Main {
 
         Building building = new Building(100);
         building.setCurrentHealthPoint(50);
-        Hero hero = new Hero(80, 80);
+        Hero hero = new Hero(80, 100);
         hero.setCurrentHealthPoint(50);
         Neutral neutral = new Neutral(20);
         hero.setCurrentHealthPoint(10);
@@ -46,6 +47,7 @@ public class Main {
 
         System.out.println(hero.getClass().getSimpleName());
         render.showIndicator(hero);
+        hero.setCurrentManaPoint(50);
         hero.setCurrentHealthPoint(0);
         render.showIndicator(hero);
         System.out.println();
