@@ -14,6 +14,8 @@ public class Render {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_YELLOW = "\u001B[33m";
 
+    public static final String ANSI_DARK_GRAY = "\u001B[90m";
+
     public void showIndicator(Object object) {
         // Не должно быть упоминания конкретных классов!!!
         // В консоли должно быть примерно так: Текущий уровень здоровья: 50,
@@ -37,7 +39,7 @@ public class Render {
     @Override
     public String toString() {
         int percent = (int) Math.ceil((double) this.current / this.total * 100);
-        String color = percent > 60 ? ANSI_GREEN : percent > 20 ? ANSI_YELLOW : ANSI_RED;
+        String color = percent > 60 ? ANSI_GREEN : percent > 20 ? ANSI_YELLOW : percent == 0 ? ANSI_DARK_GRAY : ANSI_RED;
         return String.format("Total = , %d,%s current = %d %s", total, color, current, ANSI_RESET);
     }
 }
