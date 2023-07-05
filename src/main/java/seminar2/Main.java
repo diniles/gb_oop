@@ -46,9 +46,13 @@ public class Main {
 
         System.out.println(hero.getClass().getSimpleName());
         render.showIndicator(hero);
+        hero.setCurrentHealthPoint(0);
+        render.showIndicator(hero);
         System.out.println();
 
         System.out.println(neutral.getClass().getSimpleName());
+        render.showIndicator(neutral);
+        neutral.setCurrentHealthPoint(10);
         render.showIndicator(neutral);
 
     }
