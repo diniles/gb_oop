@@ -40,6 +40,6 @@ public class Render {
     public String toString() {
         int percent = (int) Math.ceil((double) this.current / this.total * 100);
         String color = percent > 60 ? ANSI_GREEN : percent > 20 ? ANSI_YELLOW : percent == 0 ? ANSI_DARK_GRAY : ANSI_RED;
-        return String.format("Total = , %d,%s current = %d %s", total, color, current, ANSI_RESET);
+        return String.format("Total = %d,%s current = %d %s", total, color, current, ANSI_RESET);
     }
 }
