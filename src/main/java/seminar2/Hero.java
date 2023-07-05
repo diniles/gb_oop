@@ -1,6 +1,6 @@
 package seminar2;
 
-public class Hero {
+public class Hero implements Health, Mana {
 
     private int maxHealthPoint; // максимально количество здоровья
     private int currentHealthPoint; // текущее количество здоровья
@@ -25,4 +25,25 @@ public class Hero {
     }
 
     // FIXME: 29.06.2023 Дописать нужное
+
+
+    @Override
+    public int getHealth() {
+        return this.currentHealthPoint;
+    }
+
+    @Override
+    public int getHealthMax() {
+        return this.maxHealthPoint;
+    }
+
+    @Override
+    public int getMana() {
+        return this.maxManaPoint;
+    }
+
+    @Override
+    public int getManaMax() {
+        return this.maxManaPoint;
+    }
 }
