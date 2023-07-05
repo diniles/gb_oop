@@ -2,10 +2,10 @@ package seminar2;
 
 public class Hero implements Health, Mana {
 
-    private int maxHealthPoint; // максимально количество здоровья
+    private final int maxHealthPoint; // максимально количество здоровья
     private int currentHealthPoint; // текущее количество здоровья
 
-    private int maxManaPoint; // максимально количество магический энергии
+    private final int maxManaPoint; // максимально количество магический энергии
     private int currentManaPoint; // текущее количество магический энергии
 
     public Hero(int maxHealthPoint, int maxManaPoint) {
@@ -24,8 +24,8 @@ public class Hero implements Health, Mana {
         this.currentManaPoint = currentManaPoint;
     }
 
-    // FIXME: 29.06.2023 Дописать нужное
 
+    // FIXME: 29.06.2023 Дописать нужное
 
     @Override
     public int getHealth() {
@@ -39,11 +39,12 @@ public class Hero implements Health, Mana {
 
     @Override
     public int getMana() {
-        return this.maxManaPoint;
+        return this.currentManaPoint;
     }
 
     @Override
     public int getManaMax() {
         return this.maxManaPoint;
     }
+
 }
