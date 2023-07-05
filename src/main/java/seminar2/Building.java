@@ -2,7 +2,7 @@ package seminar2;
 
 public class Building implements Health {
 
-    private int maxHealthPoint; // максимально количество здоровья
+    private final int maxHealthPoint; // максимально количество здоровья
     private int currentHealthPoint; // текущее количество здоровья
 
     public Building(int maxHealthPoint) {
