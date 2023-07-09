@@ -5,10 +5,10 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Container implements Comparable<Container>, Iterable<Box> {
-    private List<Box> boxes;
+    private final List<Box> boxes;
 
     public Container() {
-        boxes = new ArrayList<Box>();
+        boxes = new ArrayList<>();
     }
 
     public void addBox(Box box) {
