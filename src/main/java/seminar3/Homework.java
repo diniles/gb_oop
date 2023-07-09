@@ -5,8 +5,6 @@ import java.util.List;
 
 public class Homework {
     public static void main(String[] args) {
-        List<Container> containers = new ArrayList<>();
-
         Container container1 = new Container();
         container1.addBox(new Box(1));
         container1.addBox(new Box(1));
@@ -18,6 +16,8 @@ public class Homework {
         }
 
         Container container2 = new Container();
+        container2.addBox(new Box(2));
+        container2.addBox(new Box(2));
         container2.addBox(new Box(2));
         container2.addBox(new Box(2));
 
@@ -34,6 +34,27 @@ public class Homework {
             case -1 -> System.out.println("Container 1 is lighter");
             case 1 -> System.out.println("Container 1 is heavier");
             default -> System.out.println("Containers are equal");
+        }
+
+        List<Container> containers = new ArrayList<>();
+        containers.add(container1);
+        containers.add(container2);
+
+        Container container3 = new Container();
+        container3.addBox(new Box(1));
+
+        containers.add(container3);
+
+        for (Container container : containers) {
+            System.out.printf("Total boxes in container: %d\n", container.getBoxesQuantity());
+        }
+
+        System.out.println("Containers sorted");
+        containers.sort(new ContainerCountComparator());
+
+        for (Container container : containers) {
+            System.out.printf("Total boxes in container: %d\n", container.getBoxesQuantity());
+
         }
 
     }
