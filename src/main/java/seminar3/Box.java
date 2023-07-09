@@ -1,7 +1,7 @@
 package seminar3;
 
 public class Box {
-    private int weight;
+    private final int weight;
 
     public Box(int weight) {
         this.weight = weight;
