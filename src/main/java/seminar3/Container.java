@@ -6,9 +6,11 @@ import java.util.List;
 
 public class Container implements Comparable<Container>, Iterable<Box> {
     private List<Box> boxes;
+    private String name;
 
     public Container() {
         boxes = new ArrayList<Box>();
+        this.name = name;
     }
 
     public void addBox(Box box) {
@@ -44,5 +46,6 @@ public class Container implements Comparable<Container>, Iterable<Box> {
     public Iterator<Box> iterator() {
         return boxes.iterator();
     }
+    
 }
 
