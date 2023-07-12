@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public class Student {
     private final UUID id;
-    private String name;
+    private final String name;
 
     public Student(String name) {
         this.id = UUID.randomUUID();
