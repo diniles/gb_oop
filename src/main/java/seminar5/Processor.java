@@ -42,6 +42,18 @@ public class Processor {
     }
 
     public void createLesson(Group group, LocalDate date) {
+        Lesson lesson = new Lesson(group, date);
+        lessons.add(lesson);
+        System.out.println("Lesson successfully created.");
+    }
 
+    public List<Lesson> getLessonsByStudent(Student student) {
+        List<Lesson> result = new ArrayList<>();
+        for (Lesson lesson : lessons) {
+            if (lesson.getGroup().equals(student.getGroup())) {
+                result.add(lesson);
+            }
+        }
+        return result;
     }
 }
