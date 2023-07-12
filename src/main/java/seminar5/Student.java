@@ -9,7 +9,7 @@ public class Student {
     private String name;
     private Group group;
 
-    public Student(UUID id, String name, Group group) {
+    public Student(String name, Group group) {
         this.id = UUID.randomUUID();
         this.name = name;
         this.group = group;
