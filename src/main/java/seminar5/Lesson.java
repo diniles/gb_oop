@@ -8,7 +8,7 @@ public class Lesson {
     private Group group;
     private LocalDate date;
 
-    public Lesson(UUID id, Group group, LocalDate date) {
+    public Lesson(Group group, LocalDate date) {
         this.id = UUID.randomUUID();
         this.group = group;
         this.date = date;
