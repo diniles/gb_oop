@@ -1,5 +1,7 @@
 package seminar5;
 
+import java.util.List;
+
 public class StudentView {
     public static void displayStudents(List<Student> students) {
         System.out.println("List of students:");
