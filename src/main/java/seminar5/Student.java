@@ -15,6 +15,10 @@ public class Student {
         this.group = group;
     }
 
+    public UUID getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
