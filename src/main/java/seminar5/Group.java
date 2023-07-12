@@ -1,5 +1,6 @@
 package seminar5;
 
+import java.util.Objects;
 import java.util.UUID;
 
 public class Group {
@@ -19,4 +20,24 @@ public class Group {
         return number;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Group group = (Group) o;
+        return Objects.equals(getId(), group.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
+
+    @Override
+    public String toString() {
+        return "Group{" +
+                "id=" + id +
+                ", number='" + number + '\'' +
+                '}';
+    }
 }
