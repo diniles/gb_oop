@@ -1,14 +1,17 @@
 package seminar5;
 
-import java.util.UUID;
-
 public class Group {
-    private UUID id;
+    private static long count = 1;
+    private long id;
     private String name;
 
     public Group(String name) {
-        this.id = UUID.randomUUID();
+        this.id = count + 1;
         this.name = name;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getName() {
@@ -18,7 +21,8 @@ public class Group {
     @Override
     public String toString() {
         return "Group{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 '}';
     }
 }
