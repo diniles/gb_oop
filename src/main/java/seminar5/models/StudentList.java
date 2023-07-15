@@ -22,6 +22,10 @@ public class StudentList {
         }
     }
 
+    public List<Student> getStudents() {
+        return List.copyOf(this.students);
+    }
+
     public Student getById(long id) {
         return students.stream()
                 .filter(student -> Objects.equals(student.getId(), id))
@@ -34,5 +38,11 @@ public class StudentList {
                 .filter(student -> Objects.equals(student.getName(), name))
                 .findFirst()
                 .orElse(null);
+    }
+
+    public List<Student> getByGroup(String group) {
+        return students.stream()
+                .filter(student -> student.getGroup().equals(group))
+                .toList();
     }
 }

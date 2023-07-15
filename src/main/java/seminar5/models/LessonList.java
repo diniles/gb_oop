@@ -20,4 +20,10 @@ public class LessonList {
                 .findFirst()
                 .orElse(null);
     }
+
+    public List<Lesson> getByGroup(String group) {
+        return lessons.stream()
+                .filter(lesson -> lesson.getGroup().equals(group))
+                .toList();
+    }
 }

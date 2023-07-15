@@ -14,6 +14,10 @@ public class Group {
         return number;
     }
 
+    public long getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         return "Group{" +
@@ -21,4 +25,5 @@ public class Group {
                 ", name='" + number + '\'' +
                 '}';
     }
+
 }
