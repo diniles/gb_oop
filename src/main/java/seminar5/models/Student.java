@@ -1,15 +1,15 @@
-package seminar5;
+package seminar5.models;
 
 public class Student {
-    private static long count = 1;
-    private long id;
-    private String name;
-    private long groupId;
+    private static long counter = 1;
+    private final long id;
+    private final String name;
+    private String group;
 
     public Student(String name) {
-        this.id = count + 1;
+        this.id = counter + 1;
         this.name = name;
-        this.groupId = 0;
+        this.group = "";
     }
 
     public long getId() {
@@ -20,12 +20,12 @@ public class Student {
         return name;
     }
 
-    public long getGroupId() {
-        return groupId;
+    public String getGroup() {
+        return group;
     }
 
-    public void setGroupId(long groupId) {
-        this.groupId = groupId;
+    public void setGroup(String group) {
+        this.group = group;
     }
 
     @Override
@@ -33,7 +33,7 @@ public class Student {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", groupId=" + groupId +
+                ", groupId=" + group +
                 '}';
     }
 }
