@@ -4,9 +4,9 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Model {
-    private GroupList groupList;
-    private StudentList studentList;
-    private LessonList lessonList;
+    private final GroupList groupList;
+    private final StudentList studentList;
+    private final LessonList lessonList;
 
     public Model() {
         this.groupList = new GroupList();
@@ -38,7 +38,7 @@ public class Model {
         return this.studentList.getByGroup(group);
     }
 
-    public long createLesson(LocalDate date) {
+    public long createLesson(String groupNumber, LocalDate date) {
         return this.lessonList.createLesson(date).getId();
     }
 
