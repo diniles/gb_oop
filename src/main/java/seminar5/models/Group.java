@@ -1,17 +1,13 @@
 package seminar5.models;
 
 public class Group {
-    private static long count = 1;
-    private long id;
-    private String number;
+    private static long counter = 1;
+    private final long id;
+    private final String number;
 
     public Group(String number) {
-        this.id = count + 1;
+        this.id = counter + 1;
         this.number = number;
-    }
-
-    public long getId() {
-        return id;
     }
 
     public String getNumber() {

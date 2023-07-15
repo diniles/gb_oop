@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class GroupList {
-    private List<Group> groups = new ArrayList<>();
+    private final List<Group> groups = new ArrayList<>();
 
     public Group createGroup(String number) {
         if (getByNumber(number) != null) {
@@ -15,10 +15,6 @@ public class GroupList {
         } else {
             throw new IllegalArgumentException("This number already exist!");
         }
-    }
-
-    public void deleteGroup(Long number) {
-        this.groups.removeIf(group -> Objects.equals(group.getNumber(), number));
     }
 
     public List<Group> getGroups() {
