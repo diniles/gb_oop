@@ -14,8 +14,11 @@ public class Model {
         this.lessonList = new LessonList();
     }
 
-    public long createGroup(String number) {
-        return this.groupList.createGroup(number).getId();
+    //    public long createGroup(String number) {
+//        return this.groupList.createGroup(number).getId();
+//    }
+    public void createGroup(String number) {
+        this.groupList.createGroup(number);
     }
 
     public List<Group> getGroups() {

@@ -12,6 +12,8 @@ public class Presenter {
     Model model;
 
     public Presenter() {
+        view = new View();
+        model = new Model();
     }
 
     public void start() {
