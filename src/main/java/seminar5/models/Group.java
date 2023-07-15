@@ -1,7 +1,7 @@
 package seminar5.models;
 
 public class Group {
-    private static long counter = 1;
+    private static long counter = 0;
     private final long id;
     private final String number;
 

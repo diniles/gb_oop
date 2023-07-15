@@ -1,7 +1,7 @@
 package seminar5.models;
 
 public class Student {
-    private static long counter = 1;
+    private static long counter = 0;
     private final long id;
     private final String name;
     private String group;
@@ -9,7 +9,6 @@ public class Student {
     public Student(String name) {
         this.id = counter + 1;
         this.name = name;
-        this.group = "";
     }
 
     public long getId() {
