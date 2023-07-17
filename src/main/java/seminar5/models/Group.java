@@ -6,7 +6,7 @@ public class Group {
     private final String number;
 
     public Group(String number) {
-        this.id = counter + 1;
+        this.id = ++counter;
         this.number = number;
     }
 

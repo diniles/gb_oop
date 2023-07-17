@@ -7,7 +7,7 @@ public class Student {
     private String group;
 
     public Student(String name) {
-        this.id = counter + 1;
+        this.id = ++counter;
         this.name = name;
     }
 

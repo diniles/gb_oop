@@ -7,14 +7,10 @@ import java.util.Objects;
 public class GroupList {
     private final List<Group> groups = new ArrayList<>();
 
-    public Group createGroup(String number) {
-        if (getByNumber(number) != null) {
-            Group group = new Group(number);
-            this.groups.add(group);
-            return group;
-        } else {
-            throw new IllegalArgumentException("This number already exist!");
-        }
+
+    public void createGroup(String number) {
+        Group group = new Group(number);
+        this.groups.add(group);
     }
 
     public List<Group> getGroups() {

@@ -14,19 +14,16 @@ public class Model {
         this.lessonList = new LessonList();
     }
 
-    //    public long createGroup(String number) {
-//        return this.groupList.createGroup(number).getId();
-//    }
     public void createGroup(String number) {
-        this.groupList.createGroup(number);
+        groupList.createGroup(number);
     }
 
     public List<Group> getGroups() {
         return this.groupList.getGroups();
     }
 
-    public long createStudent(String name) {
-        return studentList.add(name).getId();
+    public void createStudent(String name) {
+        studentList.add(name);
     }
 
     public List<Student> getStudents() {
@@ -41,8 +38,8 @@ public class Model {
         return this.studentList.getByGroup(group);
     }
 
-    public long createLesson(String groupNumber, LocalDate date) {
-        return this.lessonList.createLesson(date).getId();
+    public void createLesson(String groupNumber, LocalDate date) {
+        this.lessonList.createLesson(groupNumber, date);
     }
 
     public List<Lesson> getLessonByStudentId(long id) {

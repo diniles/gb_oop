@@ -11,7 +11,6 @@ public class View {
         System.out.println("\t5. Create a lesson for the group");
         System.out.println("\t6. List all lessons for the student");
         System.out.println("\t0. Exit");
-
     }
 }
 

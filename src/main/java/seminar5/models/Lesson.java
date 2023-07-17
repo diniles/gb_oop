@@ -8,8 +8,9 @@ public class Lesson {
     private final LocalDate date;
     private String group;
 
-    public Lesson(LocalDate date) {
-        this.id = counter + 1;
+    public Lesson(String group, LocalDate date) {
+        this.id = ++counter;
+        this.group = group;
         this.date = date;
     }
 
@@ -22,7 +23,7 @@ public class Lesson {
     }
 
     public String getGroup() {
-        return group;
+        return this.group;
     }
 
     @Override

@@ -15,11 +15,11 @@ public class StudentList {
 
     public void setGroup(long id, String groupName) {
         Student student = getById(id);
-        if (student != null) {
-            student.setGroup(groupName);
-        } else {
-            throw new IllegalArgumentException("Can't find student!");
-        }
+//        if (student != null) {
+        student.setGroup(groupName);
+//        } else {
+//            throw new IllegalArgumentException("Can't find student!");
+//        }
     }
 
     public List<Student> getStudents() {

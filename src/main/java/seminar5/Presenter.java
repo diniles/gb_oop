@@ -8,12 +8,12 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Presenter {
-    View view;
     Model model;
+    View view;
 
-    public Presenter() {
-        view = new View();
-        model = new Model();
+    public Presenter(Model model, View view) {
+        this.model = model;
+        this.view = view;
     }
 
     public void start() {

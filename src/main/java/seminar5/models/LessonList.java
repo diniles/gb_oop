@@ -8,10 +8,10 @@ import java.util.Objects;
 public class LessonList {
     private final List<Lesson> lessons = new ArrayList<>();
 
-    public Lesson createLesson(LocalDate date) {
-        Lesson newLesson = new Lesson(date);
+    public void createLesson(String group, LocalDate date) {
+        Lesson newLesson = new Lesson(group, date);
         this.lessons.add(newLesson);
-        return newLesson;
+//        return newLesson;
     }
 
     public Lesson getById(long id) {
