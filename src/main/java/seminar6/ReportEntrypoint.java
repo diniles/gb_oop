@@ -9,6 +9,7 @@ public class ReportEntrypoint {
     public ReportEntrypoint() {
         reportGenerators = new HashMap<>();
         reportGenerators.put("pdf", new ReportGeneratorPdf());
+        reportGenerators.put("json", new ReportGeneratorJson());
     }
 
     public Report create(Document document, String reportType) {
