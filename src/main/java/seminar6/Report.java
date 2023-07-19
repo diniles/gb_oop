@@ -1,5 +1,9 @@
 package seminar6;
 
 public class Report {
-    private byte[] data;
+    private final byte[] data;
+
+    public Report(byte[] reportData) {
+        this.data = reportData;
+    }
 }
