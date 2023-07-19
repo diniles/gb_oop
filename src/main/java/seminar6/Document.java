@@ -15,13 +15,6 @@ public class Document {
         return toString();
     }
 
-    public UUID getId() {
-        return id;
-    }
-
-    public String getNumber() {
-        return number;
-    }
 
     @Override
     public String toString() {
