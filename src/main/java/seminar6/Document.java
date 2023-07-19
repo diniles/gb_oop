@@ -11,7 +11,7 @@ public class Document {
         this.number = number;
     }
 
-    public String data() {
+    public String getData() {
         return toString();
     }
 
