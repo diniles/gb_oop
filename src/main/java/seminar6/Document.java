@@ -11,6 +11,10 @@ public class Document {
         this.number = number;
     }
 
+    public String data() {
+        return toString();
+    }
+
     public UUID getId() {
         return id;
     }
