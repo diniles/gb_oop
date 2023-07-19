@@ -10,6 +10,7 @@ public class ReportEntrypoint {
         reportGenerators = new HashMap<>();
         reportGenerators.put("pdf", new ReportGeneratorPdf());
         reportGenerators.put("json", new ReportGeneratorJson());
+        reportGenerators.put("xml", new ReportGeneratorXml());
     }
 
     public Report create(Document document, String reportType) {
