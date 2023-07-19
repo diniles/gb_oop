@@ -3,7 +3,7 @@ package seminar6;
 public class ReportGeneratorPdf implements ReportGenerator {
     @Override
     public Report generateReport(Document document) {
-        byte[] reportData = document.getData().getBytes();
+        String reportData = document.getData();
         return new Report(reportData);
     }
 }

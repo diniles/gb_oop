@@ -6,6 +6,8 @@ public class Homework {
 
         ReportEntrypoint reportEntrypoint = new ReportEntrypoint();
         Report report = reportEntrypoint.create(document, "pdf");
+        
+        report.printData();
 
     }
 }

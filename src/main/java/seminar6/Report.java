@@ -1,9 +1,13 @@
 package seminar6;
 
 public class Report {
-    private final byte[] data;
+    private final String data;
 
-    public Report(byte[] reportData) {
+    public Report(String reportData) {
         this.data = reportData;
+    }
+
+    public void printData() {
+        System.out.println(data);
     }
 }
